@@ -14,13 +14,12 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
-        with:
+        #with:
           #ref: ${{ github.head_ref }} # checkout source branch of PR
           #ref: ${{ github.base_ref }}  # Target branch of PR
           # ref: ${{ github.event.pull_request.head.ref }}
-
-          ref: refs/heads/main
-          fetch-depth: 0
+          #ref: refs/heads/main
+          #fetch-depth: 0
 
       - name: Run Orca IaC Scan
         uses: orcasecurity/shiftleft-iac-action@v1
