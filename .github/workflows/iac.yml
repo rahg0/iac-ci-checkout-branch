@@ -15,12 +15,8 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
-          #ref: ${{ github.head_ref }} # checkout source branch of PR
-          #ref: ${{ github.base_ref }}  # Target branch of PR
-          # ref: ${{ github.event.pull_request.head.ref }}
-
-          ref: refs/heads/main
-          fetch-depth: 0
+          fetch-depth: 0          # Full history, not a shallow clone
+          ref: ${{ github.head_ref || github.ref }}   # PR branch head, not merge commit
 
       - name: Run Orca IaC Scan
         uses: orcasecurity/shiftleft-iac-action@v1
