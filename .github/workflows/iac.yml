@@ -24,6 +24,10 @@ jobs:
           echo ""
           echo "Files in workspace:"
           find . -not -path './.git/*' -type f
+          echo "=== git log ==="
+          git log --oneline -3
+          echo "=== s3.tf contents ==="
+          cat aws/s3.tf
     
       - name: Run Orca IaC Scan
         uses: orcasecurity/shiftleft-iac-action@v1
