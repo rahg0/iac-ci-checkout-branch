@@ -17,6 +17,14 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Debug workspace
+        run: |
+          echo "Current branch/ref:"
+          git log --oneline -3
+          echo ""
+          echo "Files in workspace:"
+          find . -not -path './.git/*' -type f
+    
       - name: Run Orca IaC Scan
         uses: orcasecurity/shiftleft-iac-action@v1
         id: orca_scan
