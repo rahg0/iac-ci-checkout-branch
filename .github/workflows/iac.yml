@@ -26,7 +26,6 @@ jobs:
           git status
           ls -la ./aws/
 
-
       - name: Run Orca IaC Scan
         uses: orcasecurity/shiftleft-iac-action@v1
         id: orca_scan
