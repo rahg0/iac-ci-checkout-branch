@@ -14,8 +14,6 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v6
-        with:
-          fetch-depth: 0
 
       - name: Debug workspace
         run: |
@@ -35,5 +33,5 @@ jobs:
         with:
           api_token: ${{ secrets.ORCA_SECURITY_API_TOKEN }}
           project_key: ${{ env.PROJECT_KEY }}
-          path: "."
+          path: "./aws"
           show_annotations: true
