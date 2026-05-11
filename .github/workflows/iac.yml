@@ -35,3 +35,12 @@ jobs:
           project_key: ${{ env.PROJECT_KEY }}
           path: "./aws"
           show_annotations: true
+
+      - name: Orca IaC Scan - Binary
+        run: |
+          echo "Installing Orca-cli binary..."
+          set +e
+          apt update && apt install -y curl
+          curl -sfL 'https://raw.GitHubusercontent.com/orcasecurity/orca-cli/main/install.sh' | bash
+          orca-cli -p "${PROJECT_KEY}" iac scan .
+          
