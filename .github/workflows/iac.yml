@@ -14,12 +14,12 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v6
-        with:
-          ref: ${{ github.head_ref }} # checkout source branch of PR
+        #with:
+          #ref: ${{ github.head_ref }} # checkout source branch of PR
           #ref: ${{ github.base_ref }}  # Target branch of PR
           # ref: ${{ github.event.pull_request.head.ref }}
           # ref: refs/heads/main
-          fetch-depth: 0
+          #fetch-depth: 0
 
       - name: Git Status
         run: | 
