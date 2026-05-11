@@ -44,3 +44,4 @@ jobs:
           curl -sfL 'https://raw.GitHubusercontent.com/orcasecurity/orca-cli/main/install.sh' | bash
           orca-cli -p "${PROJECT_KEY}" iac scan .
           
+          
