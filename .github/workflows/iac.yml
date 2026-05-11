@@ -37,6 +37,8 @@ jobs:
           show_annotations: true
 
       - name: Orca IaC Scan - Binary
+        env:
+          ORCA_SECURITY_API_TOKEN: ${{ secrets.ORCA_SECURITY_API_TOKEN }}
         run: |
           echo "Installing Orca-cli binary..."
           set +e
