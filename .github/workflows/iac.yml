@@ -35,3 +35,4 @@ jobs:
           project_key: ${{ env.PROJECT_KEY }}
           path: "./aws"
           show_annotations: true
+ 
