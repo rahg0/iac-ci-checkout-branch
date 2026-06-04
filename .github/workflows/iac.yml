@@ -5,7 +5,7 @@ on:
   pull_request:
     branches: [ "main" ]
 
-jobs:
+jobs: 
   orca-iac_scan:
     name: Orca IaC Scan
     runs-on: ubuntu-latest
